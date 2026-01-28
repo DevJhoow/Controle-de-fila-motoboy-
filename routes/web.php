@@ -5,8 +5,13 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MotoboyController;
 use App\Http\Controllers\FilaController;
 
+//teste
+Route::get('/', function () {
+    return 'Laravel está rodando 🚀';
+});
+
 //Cadastro de Motoboy 
-Route::get('/', [MotoboyController::class, 'create'])->name('motoboys.create');
+// Route::get('/', [MotoboyController::class, 'create'])->name('motoboys.create');
 Route::post('/motoboys', [MotoboyController::class, 'store'])->name('motoboys.store');
 Route::get('/motoboys/{motoboy}/success', [MotoboyController::class, 'success'])->name('motoboys.success');
 
